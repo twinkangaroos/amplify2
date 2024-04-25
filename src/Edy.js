@@ -108,10 +108,8 @@ const Edy = () => {
 
     // データを保存するボタンクリック時
     const onSubmit = async () => {
-        // 6mb const url = 'https://c5gzw5serf.execute-api.ap-northeast-1.amazonaws.com/dev/post1';
-        //const url = 'https://xkposrh4y6uh44babt4i62vjmm0tvqhw.lambda-url.ap-northeast-1.on.aws/';
-        const url = 'http://localhost:3000/api/edy_ekyc'
-        //const url = 'http://18.176.182.80:3000/api/edy_ekyc'
+        //const url = 'http://localhost:3000/api/save'
+        const url = 'http://nextblog2-alb-1500478475.ap-northeast-3.elb.amazonaws.com/api/save'
         
         try {
             const currentDate = new Date().toISOString();
