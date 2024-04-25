@@ -27,15 +27,36 @@ const EntryConstruction = () => {
                             基本データ入力画面
                         </Heading>
                         
-                        <TextField
-                            label="工事名"
-                            value="XXX新築工事"
-                            disabled="true"
-                        />
+                        <Flex direction="row">
+                            <TextField
+                                label="工事名"
+                                value="ＥＱＵＩＮＩＸＯＳ２ｘ発電機燃料フィルター対応工事"
+                                disabled="true"
+                                style={{ width: "500px" }}
+                            />
+                            <TextField
+                                label="工事番号"
+                                value="R32-3-9404"
+                                disabled="true"
+                            />
+                        </Flex>
                         <TextField
                             label="ファイル工事名"
-                            value="XXX新築工事"
+                            value="ＥＱＵＩＮＩＸＯＳ２ｘ発電機燃料フィルター対応工事"
+                            style={{ width: "500px" }}
                         />
+                        <Flex direction="row">
+                            <TextField
+                                label="現場代理人"
+                                value="加藤　晴政"
+                                disabled="true"
+                            />
+                            <TextField
+                                label="施工課所"
+                                value="三部工事二課"
+                                disabled="true"
+                            />
+                        </Flex>
                         
                         <Heading level={4}>
                             工事情報
@@ -46,16 +67,30 @@ const EntryConstruction = () => {
                             名称・場所
                         </Heading>
                         <Divider orientation="horizontal" size="small" />
-
+                        <Flex direction="row">
+                            <TextField
+                                label="工事名称"
+                                value="ＥＱＵＩＮＩＸＯＳ２ｘ発電機燃料フィルター対応工事"
+                                disabled="true"
+                                style={{ width: "500px" }}
+                            />
+                            <TextField
+                                label="工事番号"
+                                value="R32-3-9404"
+                                disabled="true"
+                            />
+                        </Flex>
                         <Flex direction="row">
                             <TextField
                                 label="正式建物名称"
-                                value="XXX建物"
+                                value=""
+                                placeholder='フリー入力'
                             />
                             <SelectField
                                 label="　"
                                 value=""
                             >
+                                <option value="01"></option>
                                 <option value="01">新築</option>
                                 <option value="01">増築</option>
                                 <option value="01">改修</option>
@@ -64,7 +99,9 @@ const EntryConstruction = () => {
                         </Flex>
                         <TextField
                             label="施工場所"
-                            value=""
+                            value="大阪府箕面市彩都粟生北４丁目１番５８号"
+                            placeholder='フリー入力'
+                            style={{ width: "500px" }}
                         />
 
                         <Heading level={6}>
@@ -76,23 +113,24 @@ const EntryConstruction = () => {
                             <TextField
                                 label="交通機関・最寄駅"
                                 value=""
-                                placeholder='JR東海線'
+                                placeholder='線'
                             />
                             <TextField
                                 label="　"
                                 value=""
-                                placeholder='東淀川駅'
+                                placeholder='駅'
                             />
                             <TextField
-                                label="バス停留所"
+                                label="　"
                                 value=""
-                                placeholder='東淀川停留所'
+                                placeholder='バス　停留所'
                             />
                         </Flex>
                         <SelectField
                             label="場内駐車可否"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">現場内可</option>
                             <option value="01">近隣駐車場</option>
                         </SelectField>
@@ -106,6 +144,7 @@ const EntryConstruction = () => {
                             label="建物棟数"
                             name="language"
                             defaultValue='1'
+                            direction="row"
                         >
                             <Radio value="1">１棟</Radio>
                             <Radio value="2">２棟</Radio>
@@ -115,12 +154,13 @@ const EntryConstruction = () => {
                             label="建物用途"
                             value=""
                         >
-                            <option value="01"></option>
+                            <option value="01">コンピュータービル</option>
                         </SelectField>
                         <SelectField
                             label="建物規模（構造）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">S</option>
                             <option value="01">RC</option>
                             <option value="01">SRC</option>
@@ -130,15 +170,35 @@ const EntryConstruction = () => {
                             label="建物規模（耐震）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">免震</option>
                             <option value="01">耐震</option>
                             <option value="01">制振</option>
                         </SelectField>
-                        <TextField
-                            label="建物規模（階数）"
-                            value=""
-                            placeholder=''
-                        />
+                        <Flex direction="row">
+                            <SelectField
+                                label="建物規模（階数）：B"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <SelectField
+                                label="F"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <SelectField
+                                label="H"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                        </Flex>
+
                         <TextField
                             label="建物規模（延床面積）"
                             value=""
@@ -202,12 +262,14 @@ const EntryConstruction = () => {
                             label="発電機台数"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">１台</option>
                         </SelectField>
                         <SelectField
                             label="発電機（常用・非常用）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">常用</option>
                             <option value="01">非常用</option>
                         </SelectField>
@@ -216,6 +278,7 @@ const EntryConstruction = () => {
                             label="発電機（種別）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">DE</option>
                             <option value="01">GE</option>
                             <option value="01">GT</option>
@@ -250,6 +313,7 @@ const EntryConstruction = () => {
                             label="発電機（燃料）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">重油</option>
                             <option value="01">経由</option>
                             <option value="01">中圧ガス</option>
@@ -258,6 +322,7 @@ const EntryConstruction = () => {
                             label="発電機（冷却方式）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">空冷</option>
                             <option value="01">水冷</option>
                         </SelectField>
@@ -277,6 +342,7 @@ const EntryConstruction = () => {
                             label="オイルタンク（設置方式）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">地上</option>
                             <option value="01">地下</option>
                             <option value="01">地下タンク二重殻</option>
@@ -297,6 +363,7 @@ const EntryConstruction = () => {
                             label="蓄電池（用途）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">制御用</option>
                             <option value="01">非常照明用</option>
                             <option value="01">両用</option>
@@ -327,6 +394,7 @@ const EntryConstruction = () => {
                             label="UPS（周波数）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">50Hz</option>
                             <option value="01">60Hz</option>
                         </SelectField>
@@ -334,6 +402,7 @@ const EntryConstruction = () => {
                             label="UPS（出力電源種別）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">50Hz</option>
                             <option value="01">60Hz</option>
                         </SelectField>
@@ -341,6 +410,7 @@ const EntryConstruction = () => {
                             label="UPS（運転方式）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">単機</option>
                             <option value="01">並列冗長</option>
                         </SelectField>
@@ -348,6 +418,7 @@ const EntryConstruction = () => {
                             label="UPS（バッテリー方式）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">HS</option>
                             <option value="01">MSE</option>
                         </SelectField>
@@ -366,6 +437,7 @@ const EntryConstruction = () => {
                             label="太陽光（モジュール種別）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">単結晶</option>
                             <option value="01">多結晶</option>
                         </SelectField>
@@ -458,12 +530,14 @@ const EntryConstruction = () => {
                         <TextField
                             label="工事の特徴とポイント"
                             value=""
-                            placeholder=""
+                            placeholder="フリー入力"
+                            style={{ width: "500px" }}
                         />
                         <TextField
                             label="（リスクのポイント）"
                             value=""
-                            placeholder=""
+                            placeholder="フリー入力"
+                            style={{ width: "500px" }}
                         />
 
                         <Heading level={4}>
@@ -477,30 +551,33 @@ const EntryConstruction = () => {
 
                         <Flex direction="row">
                             <SelectField
-                                label="工事種別"
+                                label="工事種別１"
                                 value=""
                             >
                                 <option value="01">一般電気</option>
                                 <option value="01">空調</option>
                             </SelectField>
                             <SelectField
-                                label="工事種別"
+                                label="工事種別２"
                                 value=""
                             >
+                                <option value="01"></option>
                                 <option value="01">一般電気</option>
                                 <option value="01">空調</option>
                             </SelectField>
                             <SelectField
-                                label="工事種別"
+                                label="工事種別３"
                                 value=""
                             >
+                                <option value="01"></option>
                                 <option value="01">一般電気</option>
                                 <option value="01">空調</option>
                             </SelectField>
                             <SelectField
-                                label="工事種別"
+                                label="工事種別４"
                                 value=""
                             >
+                                <option value="01"></option>
                                 <option value="01">一般電気</option>
                                 <option value="01">空調</option>
                             </SelectField>
@@ -516,7 +593,7 @@ const EntryConstruction = () => {
                             <TextField
                                 label="交渉状況"
                                 value=""
-                                placeholder=""
+                                placeholder="フリー入力"
                             />
                         </Flex>
                         <Flex direction="row">
@@ -524,6 +601,7 @@ const EntryConstruction = () => {
                                 label="確定・概算"
                                 value=""
                             >
+                                <option value="01"></option>
                                 <option value="01">確定</option>
                                 <option value="01">概算</option>
                             </SelectField>
@@ -667,8 +745,9 @@ const EntryConstruction = () => {
                         </SelectField>
                         <TextField
                             label="受注先"
-                            value=""
+                            value="エクイニクス・ハイパースケール１・ジャパン特定目的会社"
                             placeholder=""
+                            style={{ width: "500px" }}
                         />
                         <TextField
                             label="支払い条件"
@@ -680,14 +759,14 @@ const EntryConstruction = () => {
                                 label="工期：着工"
                                 value=""
                             >
-                                <option value="01"></option>
+                                <option value="01">2023/01/09</option>
                                 <option value="01"></option>
                             </SelectField>
                             <SelectField
                                 label="工期：完成"
                                 value=""
                             >
-                                <option value="01"></option>
+                                <option value="01">2024/03/31</option>
                                 <option value="01"></option>
                             </SelectField>
                             <SelectField
@@ -704,6 +783,7 @@ const EntryConstruction = () => {
                                 label="施工形態：着工"
                                 value=""
                             >
+                                <option value="01"></option>
                                 <option value="01">単独</option>
                                 <option value="01">JV</option>
                             </SelectField>
@@ -1009,17 +1089,20 @@ const EntryConstruction = () => {
                         <TextField
                             label="受注（営業背景）"
                             value=""
-                            placeholder=""
+                            placeholder="フリー入力"
+                            style={{ width: "500px" }}
                         />
                         <TextField
                             label="受注（受注経緯）"
                             value=""
-                            placeholder=""
+                            placeholder="フリー入力"
+                            style={{ width: "500px" }}
                         />
                         <SelectField
                             label="受注検討会開催"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1027,6 +1110,7 @@ const EntryConstruction = () => {
                             label="リスク上申"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1034,18 +1118,21 @@ const EntryConstruction = () => {
                             label="（別途工事有無内容）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
                         <TextField
                             label="（追加予定・今後の予定）"
                             value=""
-                            placeholder=""
+                            placeholder="フリー入力"
+                            style={{ width: "500px" }}
                         />
                         <SelectField
                             label="（ＶＥ・ＣＤ取扱い）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">確認中</option>
                             <option value="01">増減清算</option>
                         </SelectField>
@@ -1053,6 +1140,7 @@ const EntryConstruction = () => {
                             label="（損害保険 要・不要）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">要</option>
                             <option value="01">不要</option>
                         </SelectField>
@@ -1060,6 +1148,7 @@ const EntryConstruction = () => {
                             label="（外注業者推薦 有無）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1067,6 +1156,7 @@ const EntryConstruction = () => {
                             label="（メーカー推薦 有無）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1074,6 +1164,7 @@ const EntryConstruction = () => {
                             label="（代理店推薦 有無）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1081,6 +1172,7 @@ const EntryConstruction = () => {
                             label="（斡旋手数料 有無）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1088,6 +1180,7 @@ const EntryConstruction = () => {
                             label="（ その他の有無）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1100,6 +1193,7 @@ const EntryConstruction = () => {
                             label="（現場事務所費用負担）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1107,6 +1201,7 @@ const EntryConstruction = () => {
                             label="（工事用電力・上下水道使用料）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1114,6 +1209,7 @@ const EntryConstruction = () => {
                             label="（産業廃棄物処理）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1121,6 +1217,7 @@ const EntryConstruction = () => {
                             label="（高所作業車）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1128,6 +1225,7 @@ const EntryConstruction = () => {
                             label="（揚重施設）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1135,6 +1233,7 @@ const EntryConstruction = () => {
                             label="（揚重センター）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1142,6 +1241,7 @@ const EntryConstruction = () => {
                             label="（仮設材・足場材）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1149,6 +1249,7 @@ const EntryConstruction = () => {
                             label="（引渡迄の電気代）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1156,6 +1257,7 @@ const EntryConstruction = () => {
                             label="（工事中の主任技術者費用）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1163,6 +1265,7 @@ const EntryConstruction = () => {
                             label="（共益費）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1170,6 +1273,7 @@ const EntryConstruction = () => {
                             label="（有償支給材有無）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1177,6 +1281,7 @@ const EntryConstruction = () => {
                             label="（天井開口墨出し開口補強）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1184,6 +1289,7 @@ const EntryConstruction = () => {
                             label="（仮設電気工事有無）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1200,6 +1306,7 @@ const EntryConstruction = () => {
                             label="（要求品質仕様書）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1212,6 +1319,7 @@ const EntryConstruction = () => {
                             label="（設計応援）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1264,6 +1372,7 @@ const EntryConstruction = () => {
                             label="電気工事士法・電気工事業法"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1271,6 +1380,7 @@ const EntryConstruction = () => {
                             label="仮設発電機使用(10kW以上)"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1278,6 +1388,7 @@ const EntryConstruction = () => {
                             label="電気主任技術者の選任"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1285,6 +1396,7 @@ const EntryConstruction = () => {
                             label="石綿事前調査結果報告"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1312,6 +1424,7 @@ const EntryConstruction = () => {
                             label="支店(社)巡回検査"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1319,6 +1432,7 @@ const EntryConstruction = () => {
                             label="支店(社)竣工検査"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1326,6 +1440,7 @@ const EntryConstruction = () => {
                             label="本店巡回点検"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1333,6 +1448,7 @@ const EntryConstruction = () => {
                             label="本店巡回検査"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1340,6 +1456,7 @@ const EntryConstruction = () => {
                             label="本店特別検査"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1352,6 +1469,7 @@ const EntryConstruction = () => {
                             label="（本店表彰工事）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1359,6 +1477,7 @@ const EntryConstruction = () => {
                             label="（技術成果発表会）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1366,6 +1485,7 @@ const EntryConstruction = () => {
                             label="（きんでんれびゅー）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1373,6 +1493,7 @@ const EntryConstruction = () => {
                             label="（電気設備学会）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1385,6 +1506,7 @@ const EntryConstruction = () => {
                             label="（２４センター）"
                             value=""
                         >
+                            <option value="01"></option>
                             <option value="01">有</option>
                             <option value="01">無</option>
                         </SelectField>
@@ -1817,6 +1939,7 @@ const EntryConstruction = () => {
                                 label="社内ＪＶの有無"
                                 value=""
                             >
+                                <option value="01"></option>
                                 <option value="01">有</option>
                                 <option value="01">無</option>
                             </SelectField>
@@ -1841,8 +1964,566 @@ const EntryConstruction = () => {
                             value=""
                             placeholder=""
                         />
-
-                        
+                        <TextField
+                            label="現場事務所電話番号"
+                            value=""
+                            placeholder=""
+                        />
+                        <Flex direction="row">
+                            <SelectField
+                                label="当社関係者（現場代理人）社員番号"
+                                value=""
+                            >
+                                <option value="01">620114</option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value="加藤 晴政"
+                                placeholder=""
+                            />
+                            <TextField
+                                label="携帯電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="元請時（監理技術者）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                            <SelectField
+                                label="選任・非選任"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">選任</option>
+                                <option value="01">非選任</option>
+                            </SelectField>
+                            <TextField
+                                label="携帯電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="（主任技術者）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                            <SelectField
+                                label="選任・非選任"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">選任</option>
+                                <option value="01">非選任</option>
+                            </SelectField>
+                            <TextField
+                                label="携帯電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="（営業責任者）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                            <TextField
+                                label="携帯電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="（施主窓口）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                            <TextField
+                                label="携帯電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="（受注先（値交）窓口）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                            <TextField
+                                label="携帯電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="（工事部長）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                            <TextField
+                                label="携帯電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="（課所長）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                            <TextField
+                                label="携帯電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="（課所安全管理者）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                            <TextField
+                                label="携帯電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="元請時（監理技術者）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                            <TextField
+                                label="携帯電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="（グループ長）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                            <TextField
+                                label="携帯電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="（現場担当者）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                            <SelectField
+                                label="社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="（現場担当者）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                            <SelectField
+                                label="社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="（現場担当者）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                            <SelectField
+                                label="社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="（作業指揮者・総合職長）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                            <SelectField
+                                label="社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="（設計責任者）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="（設計責任者）社員番号"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01"></option>
+                            </SelectField>
+                            <TextField
+                                label="氏名"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <TextField
+                                label="施工会社体制：会社名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="施工区分（エリア）"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="担当者名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <TextField
+                                label="施工会社体制：会社名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="施工区分（エリア）"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="担当者名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <TextField
+                                label="施工会社体制：会社名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="施工区分（エリア）"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="担当者名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <TextField
+                                label="施工会社体制：会社名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="施工区分（エリア）"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="担当者名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <TextField
+                                label="施工会社体制：会社名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="施工区分（エリア）"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="担当者名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <TextField
+                                label="施工会社体制：会社名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="施工区分（エリア）"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="担当者名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <TextField
+                                label="施工会社体制：会社名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="施工区分（エリア）"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="担当者名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <TextField
+                                label="施工会社体制：会社名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="施工区分（エリア）"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="担当者名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <TextField
+                                label="施工会社体制：会社名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="施工区分（エリア）"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="担当者名"
+                                value=""
+                                placeholder=""
+                            />
+                             <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
 
                         
                         <Heading level={4}>
@@ -1853,14 +2534,163 @@ const EntryConstruction = () => {
                             会議（現場）
                         </Heading>
                         <Divider orientation="horizontal" size="small" />
+                        <Flex direction="row">
+                            <SelectField
+                                label="1 施主定例："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">毎月</option>
+                                <option value="01">毎週</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">１日</option>
+                                <option value="01">２日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">月曜日</option>
+                                <option value="01">火曜日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="2 工程会議（定例）："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">毎月</option>
+                                <option value="01">毎週</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">１日</option>
+                                <option value="01">２日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">月曜日</option>
+                                <option value="01">火曜日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="3 安全衛生協議会："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">毎月１日</option>
+                                <option value="01">毎月２日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="4 職場安全衛生会議："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">毎月１日</option>
+                                <option value="01">毎月２日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="5 着工会議："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
 
                         <Heading level={6}>
                             会議（社内）
                         </Heading>
                         <Divider orientation="horizontal" size="small" />
-
-
-
+                        <Flex direction="row">
+                            <SelectField
+                                label="1 事前検討会議："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                            <SelectField
+                                label="本店参加"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">有</option>
+                                <option value="01">無</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="2 施工計画会議："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="3 完工会議："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
 
                         <Heading level={4}>
                             着工前提出届出
@@ -1870,6 +2700,96 @@ const EntryConstruction = () => {
                             承諾・届
                         </Heading>
                         <Divider orientation="horizontal" size="small" />
+                        <Flex direction="row">
+                            <SelectField
+                                label="1 工事着工届："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label=" 2 現場代理人届："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="3 主任(監理)技術者届："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="4 主要資材業者承諾："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="5 施工計画提出："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
                         
 
                         <Heading level={4}>
@@ -1880,23 +2800,347 @@ const EntryConstruction = () => {
                             工事・安全関係・提示物
                         </Heading>
                         <Divider orientation="horizontal" size="small" />
-
+                        <Flex direction="row">
+                            <SelectField
+                                label="1 建設業の許可票："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="2 労災保険関係成立票："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="3 登録電気工事業届済票："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="4 施工体系図："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="5 安全管理組織図："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="6 工事係・班編成表："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="7 緊急連絡表："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="8 社名旗・安全衛生旗："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="9 安全衛生ポスター："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="10 安全・品質所長方針："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="11 消火器・救急箱："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
+                        <Flex direction="row">
+                            <SelectField
+                                label="12 ISO方針・部門目標ポスター："
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">予定日</option>
+                                <option value="01">予定日</option>
+                            </SelectField>
+                            <SelectField
+                                label="　"
+                                value=""
+                            >
+                                <option value="01"></option>
+                                <option value="01">実施日</option>
+                                <option value="01">実施日</option>
+                            </SelectField>
+                        </Flex>
 
 
                         <Heading level={4}>
                             緊急連絡票
                         </Heading>
                         <Divider orientation="horizontal" />
-                        <Heading level={6}>
-                            　
-                        </Heading>
-                        <Divider orientation="horizontal" size="small" />
-
-
-
-
-
-
+                        <Flex direction="row">
+                            <TextField
+                                label="災害時搬送病院"
+                                value=""
+                                placeholder="フリー入力"
+                            />
+                            <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                            <TextField
+                                label="住所"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <TextField
+                                label="災害時連絡先労働基準監督署"
+                                value=""
+                                placeholder="フリー入力"
+                            />
+                            <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                            <TextField
+                                label="住所"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <TextField
+                                label="火災時連絡先消防署"
+                                value=""
+                                placeholder="フリー入力"
+                            />
+                            <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                            <TextField
+                                label="住所"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <TextField
+                                label="工事事故時連絡先警察署"
+                                value=""
+                                placeholder="フリー入力"
+                            />
+                            <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                            <TextField
+                                label="住所"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <TextField
+                                label="最寄りの電力会社営業所"
+                                value=""
+                                placeholder="フリー入力"
+                            />
+                            <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                            <TextField
+                                label="住所"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <TextField
+                                label="最寄りのガス会社営業所"
+                                value=""
+                                placeholder="フリー入力"
+                            />
+                            <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                            <TextField
+                                label="住所"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
+                        <Flex direction="row">
+                            <TextField
+                                label="最寄りの水道局"
+                                value=""
+                                placeholder="フリー入力"
+                            />
+                            <TextField
+                                label="電話番号"
+                                value=""
+                                placeholder=""
+                            />
+                            <TextField
+                                label="住所"
+                                value=""
+                                placeholder=""
+                            />
+                        </Flex>
 
                     </Flex>
                 </View>
